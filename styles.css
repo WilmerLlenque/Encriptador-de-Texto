@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --color-letra:#0A3871;
+    --color-fondo:#E5E5E5;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+}
+body{
+    background-color: var(--color-fondo);
+}
+.main-container{
+    height: 100%;
+    padding: 0 0 24px;
+}
+.logotipo-alura{
+    position: relative;
+    width: 100%;
+    height: 70px;
+}
+.logotipo-alura img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 0 0 12px;
+}
+.secciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    gap: 40px;
+}
+.intput-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+#inputTexto{
+    width: 100%;
+    height: 200px;
+    background-color: var(--color-fondo);
+    border: none;
+    outline: none;
+    font-size: 32px;
+    color: var(--color-letra);
+    
+}
+#inputTexto::placeholder{
+    color: var(--color-letra);
+}
+.seccion-botones{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    height: 216px;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    height: 158px;
+}
+.buttons button{
+    height: 67px;
+    text-align: center;
+    border-radius: 25px;
+    font-size: 16px;
+    border: 1px solid var(--color-letra);
+    cursor: pointer;
+}
+#encriptarBtn{
+    background-color: var(--color-letra);
+    color: white;
+}
+#desencriptarBtn{
+    background-color: var(--color-fondo);
+    color: var(--color-letra);
+}
+.output-section{
+    width: 95%;
+    padding: 32px;
+    background-color:white;
+    text-align: center;
+    border-radius: 38px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.output-section img{
+    display: none;
+}
+.output-section p{
+    line-height: 30px;
+}
+.output-section strong{
+    color: #343A40;
+    font-weight: bold;
+    font-size: 24px;
+}
+.output-section textarea{
+    width: 90%;
+    height: 80%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: var(--color-letra);
+    text-align: justify;
+}
+.copiar{
+    display: none;
+    height: 35px;
+    width: 60%;
+    text-align: center;
+    border-radius: 25px;
+    font-size: 16px;
+    border: 1px solid var(--color-letra);
+    cursor: pointer;
+    margin-top: 25px;
+}
+#outputTextoTexarea{
+    display: none;
+}
+@media only screen and (min-width:450px) and (max-width:768px){
+    .seccion-botones{
+        height: 102px;
+        gap: 15px;
+    }
+    .buttons{
+        flex-direction: row;
+    }
+    .buttons button{
+        min-width: 45.35%;
+    }
+    .output-section img{
+        display: none;
+    }
+    
+}
+
+@media only screen and (min-width:768px){
+    body{
+        height: 100vh;
+    }
+    .secciones{
+        display: flex;
+        flex-direction: row;
+        height: 86%;
+    }
+    .seccion-botones{
+        height: 101px;
+        gap: 0;
+    }
+    .buttons{
+        height: 67px;
+        flex-direction: row;
+    }
+    .buttons button{
+        min-width: 45.35%;
+    }
+    .output-section{
+        height: 100%;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .output-section img{
+        display: block;
+        width: 236px;
+        height: 204px;
+    }
+    .intput-section{
+        width: 50%;
+        margin-left: 10%;
+    }
+
+}
